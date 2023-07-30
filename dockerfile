@@ -1,13 +1,18 @@
-# syntax=docker/dockerfile:1
+# Use the official Python image as the base image
+FROM python:3.8-slim
 
-FROM python:3.8-slim-buster
+# Set the working directory in the container
+WORKDIR /app
 
-WORKDIR /python-docker
+# Copy the requirements file to the container
+COPY requirements.txt .
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+# Install the project dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the rest of the application code to the container
 COPY . .
+
 # Expose a port for the Flask application
 EXPOSE 5000
 

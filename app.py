@@ -1,6 +1,9 @@
 from flask import Flask, render_template, jsonify , request
 import requests
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+PORT = os.getenv('PORT') 
 app = Flask(__name__)
 
 @app.route('/' , methods=['GET'])
@@ -22,6 +25,6 @@ def index():
         except requests.RequestException as e:
             # Handle any exceptions that might occur during the request
             return jsonify({'error': 'An error occurred during the request'}), 500
-
+        
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True , host='0.0.0.0' , port=PORT)
