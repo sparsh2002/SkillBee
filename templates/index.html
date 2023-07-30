@@ -8,8 +8,8 @@
 <body>
     <div class="main">
         <div class="left-main">
-            <p class="top-number">2237769</p>
-            <p class="hero-text">Explore the  <br>nightlife of  <br>your city</p>
+            <p class="top-number">{{data['key']}}</p>
+            <p class="hero-text">{{data['activity']}}</p>
             <p class="hero-subline">Outdoor & Sporting Goods Company</p>
             <div class="mid-section">
                 <button class="hero-button">Explore More 
@@ -39,7 +39,7 @@
         <div class="right-main">
             <div class="right-upper">
                 <p class="right-up-text" >PRICE</p>
-                <p class="right-down-text" >0.1</p>
+                <p class="right-down-text" >{{data['price']}}</p>
             </div>
             <div class="image-div">
                 <div class="image-div-left">
@@ -68,7 +68,7 @@
                 
         <div class="right-inner-div">
             <p class="footer-inner-div-support">Accessibility</p>
-            <p class="footer-inner-div-main-text">0.32</p>
+            <p class="footer-inner-div-main-text">{{data['accessibility']}}</p>
         </div>
        </div>
        <div class="footer-inner-div">
@@ -82,7 +82,7 @@
                 
         <div class="right-inner-div">
             <p class="footer-inner-div-support">Type</p>
-            <p class="footer-inner-div-main-text">Social</p>
+            <p class="footer-inner-div-main-text">{{data['type']}}</p>
         </div>
        </div>
     </div>
