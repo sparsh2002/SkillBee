@@ -104,6 +104,7 @@
     padding-left: 10vw;
     padding-top:5vh;
     column-gap: 10vw;
+    z-index: -1;
   }
 
 .footer-inner-div{
@@ -127,4 +128,36 @@
     flex-direction: column;
     /* align-content: space-between; */
     /* justify-content: space-between; */
+}
+
+.right-upper{
+    text-align: right;
+    margin-right: 5vw;
+}
+
+.right-up-text{
+    font-weight: 300;
+}
+
+.right-down-text{
+    font-weight: 600;
+}
+
+.image-div{
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.image-div-left{
+
+}
+
+.image-div-right{
+    display: flex;
+    flex-direction: column;
+    right:0px;
 }
